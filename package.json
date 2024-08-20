@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "client": "cd client && npm start",
-    "server": "cd server && nodemon index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+  "server": "cd server && nodemon index.js",
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "build": "cd client && npm install && npm run build && cd ../server && npm install"
   },
   "keywords": [],
   "author": "SeanMongey",
