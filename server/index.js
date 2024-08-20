@@ -41,20 +41,27 @@ app.get("/account/create/:name/:email/:password", async (req, res) => {
   }
 });
 
+
+
 // Login user
 app.get("/account/login/:email/:password", async (req, res) => {
   try {
     const user = await find(req.params.email);
 
     if (user.length > 0 && user[0].password === req.params.password) {
-      res.status(200).send(user[0]);
+      // Send a valid JSON response on successful login
+      res.status(200).json({ loginStatus: true, ...user[0] });
     } else {
-      res.status(401).send("Login failed");
+      // Send a JSON response instead of plain text on login failure
+      res.status(401).json({ loginStatus: false, message: "Login failed" });
     }
   } catch (error) {
-    res.status(500).send("Internal server error");
+    // Ensure all error responses are in JSON format
+    res.status(500).json({ loginStatus: false, message: "Internal server error" }); 
   }
 });
+
+
 
 // Find user account
 app.get("/account/find/:email", async (req, res) => {

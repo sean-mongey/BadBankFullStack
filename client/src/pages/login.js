@@ -3,6 +3,7 @@ import { Card, Button, Form, Row, Col } from "react-bootstrap";
 import { useCurrentUser } from "../components/context.js";
 import useTransactionState from "../components/useTransactionState.js";
 import { validateEmail } from "../components/validation.js";
+
 const Login = () => {
   const { currentUser, login, logout } = useCurrentUser();
 
@@ -33,33 +34,58 @@ const Login = () => {
     setShowLoginForm(true);
   };
 
+  // Asynchronous function to handle user login
   const handleLogin = async (event) => {
+    // Prevent the default form submission behavior
     event.preventDefault();
+    // Log the start of the login process for debugging purposes
     console.log("handleLogin starting");
 
-    setLoading(true);
-    setLoginAttempted(true);
+    // Start the try block to catch any errors
+    try {
+      // Set loading state to true to indicate the login process is ongoing
+      setLoading(true);
+      // Mark that a login attempt has been made
+      setLoginAttempted(true);
 
-    await login(email, password);
+      // Await the login function that uses the provided email and password
+      await login(email, password);
+      clearForm();
+    } catch (error) {
+      // Log any errors that occur during the login process
+      console.error("Error during login:", error);
+      emailInputRef.current && emailInputRef.current.focus();
+    } finally {
+      // Stop the loading state after processing the login attempt or error
+      setLoading(false);
+    }
   };
 
+  // useEffect hook to validate the login form whenever email or password changes
   useEffect(() => {
+    // Set login form validity based on email and password inputs
     setLoginFormValid(validateEmail(email) && password.trim() !== "");
   }, [email, password]);
+
+  // useEffect hook to handle actions after a login attempt has been made
   useEffect(() => {
-    setLoginFormValid(validateEmail(email) && password.trim() !== "");
-  }, [email, password]);
-  useEffect(() => {
-    if (loginAttempted) {
-      if (currentUser && currentUser.loginStatus) {
+    // Check if a login attempt has been made and if there's a current user
+    if (loginAttempted && currentUser) {
+      // If the user is logged in successfully
+      if (currentUser.loginStatus) {
+        // Hide the login form
         setShowLoginForm(false);
+        // If the logout button exists, focus on it
         logoutButtonRef.current && logoutButtonRef.current.focus();
       } else {
-        alert("Please check that your email and password have been entered correctly");
+        // Clear the form fields
         clearForm();
+        // If the email input field exists, focus on it
         emailInputRef.current && emailInputRef.current.focus();
       }
+      // Stop the loading state after processing the login attempt
       setLoading(false);
+      // Reset the login attempted state
       setLoginAttempted(false);
     }
   }, [currentUser, loginAttempted]);
