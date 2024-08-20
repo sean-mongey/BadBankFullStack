@@ -35,15 +35,24 @@ const Footer = () => {
             href="https://github.com/sean-mongey/BadBankFullStack"
             style={{ color: "white" }}
           >
-            <img
-              src="bank.png"
-              alt="Bank Logo"
+ <div
               style={{
-                maxWidth: "30px",
-                maxHeight: "30px",
-                marginLeft: "10px",
+                backgroundColor: "#17a2b8", 
+                padding: "6px", 
+                borderRadius: "15px", 
+                border: "2px solid #17a2b8", 
+                display: "inline-block",
               }}
-            />
+            >
+              <img
+                src="bank.png"
+                alt="Bank Logo"
+                style={{
+                  maxWidth: "30px",
+                  maxHeight: "30px",
+                }}
+              />
+            </div>
             Bad Bank
           </a>
         </div>
