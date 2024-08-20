@@ -212,4 +212,4 @@ Transfers funds from one user's account to another.
 Admin
 Get All Users:
 GET /account/all
-Retrieves details of all users
+Retrieves details of all users# BadBankFullStack
