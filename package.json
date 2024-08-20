@@ -1,0 +1,49 @@
+{
+  "name": "badbank",
+  "version": "1.0.0",
+  "description": "This is my capstone project for MIT xPro Professional Certificate in Coding: Full Stack Development with MERN. It is a web application called \"Bad Bank\" that simulates basic banking functionalities such as account creation, login, deposit, withdrawal, and transaction history viewing.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && nodemon index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "SeanMongey",
+  "license": "MIT",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "firebase": "^10.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.24.7",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.3",
+    "react-scripts": "^5.0.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
