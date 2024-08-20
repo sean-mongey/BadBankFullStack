@@ -4,6 +4,7 @@
 
 ## **Table of Contents**
 - [Introduction](#introduction)
+- [File Tree](#file-tree)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
@@ -21,6 +22,50 @@
 
 ## **Introduction**
 **Bad Bank** is an intentionally satirical application designed to reflect the most inconvenient and user-unfriendly banking experience. The project is a culmination of the skills acquired throughout the MIT xPro Professional Certificate in Full Stack Development with MERN. It features a complete web application with a modern user interface and integrates with Firebase for user authentication and data storage.
+
+## **File Tree
+Bad Bank/
+├── client/
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── bank.png
+│   │   ├── github.png
+│   │   └── linkedIn.png
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── context.js
+│   │   │   ├── footer.js
+│   │   │   ├── navbar.js
+│   │   │   ├── transactionTools.js
+│   │   │   ├── useTransactionState.js
+│   │   │   └── validation.js
+│   │   ├── pages/
+│   │   │   ├── allData.js
+│   │   │   ├── createAccount.js
+│   │   │   ├── deposit.js
+│   │   │   ├── home.js
+│   │   │   ├── login.js
+│   │   │   ├── transactionHistory.js
+│   │   │   ├── transfer.js
+│   │   │   ├── userTransactions.js
+│   │   │   └── withdraw.js
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── babel.config.json
+│   ├── .gitignore
+│   ├── package-lock.json
+│   └── package.json
+├── server/
+│   ├── .gitignore
+│   ├── dal.js
+│   ├── database_test.js
+│   ├── firebase.js
+│   ├── index.js
+│   ├── package.json
+│   └── package-lock.json
+├── README.md
+├── package.json
+└── package-lock.json
 
 ## **Installation**
 
