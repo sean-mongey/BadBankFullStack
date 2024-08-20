@@ -24,7 +24,7 @@
 **Bad Bank** is an intentionally satirical application designed to reflect the most inconvenient and user-unfriendly banking experience. The project is a culmination of the skills acquired throughout the MIT xPro Professional Certificate in Full Stack Development with MERN. It features a complete web application with a modern user interface and integrates with Firebase for user authentication and data storage.
 
 ## **File Tree
-\```plaintext
+```plaintext
 Bad Bank/
 ├── client/
 │   ├── public/
@@ -67,7 +67,7 @@ Bad Bank/
 ├── README.md
 ├── package.json
 └── package-lock.json
-\```
+```
 
 
 ## **Installation**
