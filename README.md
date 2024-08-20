@@ -213,3 +213,4 @@ Admin
 Get All Users:
 GET /account/all
 Retrieves details of all users# BadBankFullStack
+# BadBankFullStack
