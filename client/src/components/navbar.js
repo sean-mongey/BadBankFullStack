@@ -52,6 +52,18 @@ const NavBar = () => {
               {!currentUser || !currentUser.loginStatus ? "Login" : "Logout"}
             </Nav.Link>
           </LinkContainer>
+          <Nav.Link
+            style={{
+              border: "4px solid grey",
+              padding: "5px",
+              borderRadius: "50px",
+              color: "white",
+            }}
+          >
+            {!currentUser || !currentUser.loginStatus
+              ? ""
+              : `${currentUser.name}`}
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
