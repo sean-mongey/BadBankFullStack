@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
         <div className="flex-grow-1 d-flex justify-content-center align-items-center">
           <a
-            href="https://github.com/sean-mongey/BadBank"
+            href="https://github.com/sean-mongey/BadBankFullStack"
             style={{ color: "white" }}
           >
             <img
