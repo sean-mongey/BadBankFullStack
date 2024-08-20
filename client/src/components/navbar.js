@@ -53,17 +53,16 @@ const NavBar = () => {
             </Nav.Link>
           </LinkContainer>
           <Nav.Link
-            style={{
-              border: "4px solid grey",
-              padding: "5px",
-              borderRadius: "50px",
-              color: "white",
-            }}
-          >
-            {!currentUser || !currentUser.loginStatus
-              ? ""
-              : `${currentUser.name}`}
-          </Nav.Link>
+  style={{
+    border: currentUser && currentUser.loginStatus && currentUser.name ? "4px solid grey" : "none",
+    padding: "5px",
+    borderRadius: "50px",
+    color: "white",
+  }}
+>
+  {!currentUser || !currentUser.loginStatus ? "" : `${currentUser.name}`}
+</Nav.Link>
+
         </Nav>
       </Navbar.Collapse>
     </Navbar>
