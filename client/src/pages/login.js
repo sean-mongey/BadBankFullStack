@@ -47,14 +47,15 @@ const Login = () => {
     setLoginFormValid(validateEmail(email) && password.trim() !== "");
   }, [email, password]);
   useEffect(() => {
-    if (loginAttempted && currentUser) {
-      if (currentUser.loginStatus) {
+    setLoginFormValid(validateEmail(email) && password.trim() !== "");
+  }, [email, password]);
+  useEffect(() => {
+    if (loginAttempted) {
+      if (currentUser && currentUser.loginStatus) {
         setShowLoginForm(false);
         logoutButtonRef.current && logoutButtonRef.current.focus();
       } else {
-        alert(
-          "Please check that your email and password have been entered correctly"
-        );
+        alert("Please check that your email and password have been entered correctly");
         clearForm();
         emailInputRef.current && emailInputRef.current.focus();
       }
@@ -62,7 +63,6 @@ const Login = () => {
       setLoginAttempted(false);
     }
   }, [currentUser, loginAttempted]);
-
   const userLogout = () => {
     logout();
     clearForm();
