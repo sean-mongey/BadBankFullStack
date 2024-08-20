@@ -1,0 +1,56 @@
+{
+  "name": "badbank",
+  "version": "1.0.0",
+  "description": "This is the frontend portion of my capstone project for MIT xPro Professional Certificate in Coding: Full Stack Development with MERN. It is a web application called \"Bad Bank\" that simulates basic banking functionalities such as account creation, login, deposit, withdrawal, and transaction history viewing.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "keywords": [],
+  "author": "SeanMongey",
+  "license": "MIT",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.3",
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
+    "react-cookie": "^7.2.0",
+    "react-dom": "^18.3.1",
+    "react-router": "^6.25.1",
+    "react-router-bootstrap": "^0.26.3",
+    "react-router-dom": "^6.26.0",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.5",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.24.7",
+    "react-scripts": "^5.0.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
