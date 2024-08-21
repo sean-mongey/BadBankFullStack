@@ -1,7 +1,6 @@
 //deposit.js
 import React, { useEffect, useState } from "react";
 import { Card, Button, Form } from "react-bootstrap";
-import { useCurrentUser } from "../components/context.js";
 import { displayAmount } from "../components/transactionTools.js";
 import useTransactionState from "../components/useTransactionState.js";
 import {

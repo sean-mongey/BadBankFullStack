@@ -71,8 +71,7 @@ const CreateAccount = () => {
       }
     } catch (error) {
       console.error("Error creating account:", error);
-      alert("There was an error creating the account. Please try again."); // Error handling
-    }
+         }
   };
 
   useEffect(() => {
