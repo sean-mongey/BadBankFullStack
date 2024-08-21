@@ -36,7 +36,7 @@ const Transfer = () => {
     if (currentUser) {
       try {
         const response = await fetch(
-          `http://localhost:3333/account/balance/${currentUser.email}`
+          `https://badbankfullstack-backend.onrender.com/account/balance/${currentUser.email}`
         );
         if (!response.ok) {
           console.error(`Error: ${response.status} - ${response.statusText}`);
@@ -64,7 +64,7 @@ const Transfer = () => {
     }
     try {
       const response = await fetch(
-        `http://localhost:3333/account/transfer/${currentUser.email}/${recipientEmail}/${transactionAmount}`
+        `https://badbankfullstack-backend.onrender.com/account/transfer/${currentUser.email}/${recipientEmail}/${transactionAmount}`
       );
       let result;
 

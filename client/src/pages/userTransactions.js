@@ -14,7 +14,7 @@ const UserTransactions = () => {
     if (email) {
       try {
         const response = await fetch(
-          `http://localhost:3333/account/transactions/${email}`
+          `https://badbankfullstack-backend.onrender.com/account/transactions/${email}`
         );
         if (!response.ok) {
           console.error(`Error: ${response.status} - ${response.statusText}`);

@@ -30,12 +30,14 @@ const Deposit = () => {
     validateForm,
   } = useTransactionState({ initialAmount: "", showFormInitially: true });
 
+
+
   // Retrieve the balance and set it in the state
   const retrieveBalance = async () => {
     if (currentUser) {
       try {
         const response = await fetch(
-          `http://localhost:3333/account/balance/${currentUser.email}`
+          `https://badbankfullstack-backend.onrender.com/account/balance/${currentUser.email}`
         );
 
         if (!response.ok) {
@@ -63,7 +65,7 @@ const Deposit = () => {
     }
     try {
       const response = await fetch(
-        `http://localhost:3333/account/update/${currentUser.email}/${transactionAmount}`
+        `https://badbankfullstack-backend.onrender.com/account/update/${currentUser.email}/${transactionAmount}`
       );
       const updatedUser = await response.json();
 
@@ -76,6 +78,7 @@ const Deposit = () => {
         setLastTransactionAmount(transactionAmount);
         setTransactionAmount("");
         setShowTransactionForm(false);
+
       } else {
         console.error("Error updating balance:", updatedUser);
       }

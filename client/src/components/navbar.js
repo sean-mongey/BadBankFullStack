@@ -58,6 +58,7 @@ const NavBar = () => {
     padding: "5px",
     borderRadius: "50px",
     color: "white",
+   
   }}
 >
   {!currentUser || !currentUser.loginStatus ? "" : `${currentUser.name}`}

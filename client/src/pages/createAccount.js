@@ -56,7 +56,7 @@ const CreateAccount = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3333/account/create/${capitalisedName}/${email}/${password}`
+        `https://badbankfullstack-backend.onrender.com/account/create/${capitalisedName}/${email}/${password}`
       );
       const userData = await response.json();
 

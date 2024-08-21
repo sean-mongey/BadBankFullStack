@@ -14,7 +14,7 @@ import {
 } from "./dal.js";
 
 const app = express();
-const port = 3333;
+const port = 4444;
 
 // Middleware to serve static files and handle CORS
 app.use(express.static("../client/public"));

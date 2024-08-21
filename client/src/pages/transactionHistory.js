@@ -19,7 +19,7 @@ const TransactionHistory = () => {
     if (currentUser) {
       try {
         const response = await fetch(
-          `http://localhost:3333/account/transactions/${currentUser.email}`
+          `https://badbankfullstack-backend.onrender.com/account/transactions/${currentUser.email}`
         );
         if (!response.ok) {
           console.error(`Error: ${response.status} - ${response.statusText}`);

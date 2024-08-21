@@ -27,7 +27,7 @@ function AllData() {
   useEffect(() => {
     const fetchAllUsers = async () => {
       try {
-        const response = await fetch("http://localhost:3333/account/all");
+        const response = await fetch("https://badbankfullstack-backend.onrender.com/account/all");
         const users = await response.json();
         setAllUsers(users);
       } catch (error) {

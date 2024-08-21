@@ -8,7 +8,7 @@ const CurrentUserProvider = ({ children }) => {
 
   const login = async (email, password) => {
     const response = await fetch(
-      `http://localhost:3333/account/login/${email}/${password}`
+      `https://badbankfullstack-backend.onrender.com/account/login/${email}/${password}`
     );
     const user = await response.json();
     if (response.status === 200) {
@@ -28,7 +28,7 @@ const CurrentUserProvider = ({ children }) => {
     if (currentUser) {
       try {
         const response = await fetch(
-          `http://localhost:3333/account/balance/${currentUser.email}`
+          `https://badbankfullstack-backend.onrender.com/account/balance/${currentUser.email}`
         );
         if (!response.ok) {
           console.error(`Error: ${response.status} - ${response.statusText}`);
