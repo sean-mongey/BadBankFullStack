@@ -1,4 +1,4 @@
-<href="https://seanmongeybadbank.web.app/"# **Bad Bank**>
+<a href="https://seanmongeybadbank.web.app/"># **Bad Bank**</a>
 
 **Bad Bank** is a capstone project for the MIT xPro Professional Certificate in Coding: Full Stack Development with MERN. This web application simulates essential banking functionalities such as account creation, login, deposit, withdrawal, transfer of funds, and transaction history viewing. The project demonstrates a comprehensive full stack implementation using the MERN stack (MongoDB, Express, React, Node.js) alongside Firebase for database management.
 
